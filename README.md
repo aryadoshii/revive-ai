@@ -4,7 +4,8 @@
 
 # ReVive AI ✨
 
-### From Faded to Vivid — AI-Powered Photo Restoration
+### From Faded to Vivid — Every photo deserves a second life.
+### AI-Powered Photo Restoration
 
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io)
