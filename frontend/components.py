@@ -8,6 +8,7 @@ from __future__ import annotations
 import base64
 import io
 import os
+import re
 from typing import Any
 
 import cv2
@@ -626,7 +627,7 @@ def render_results(
                 <div style="font-size:0.9rem; font-weight:600; color:{c['text_secondary']}; margin-bottom:10px;">🛠️ What We Fixed</div>
                 <ul style="margin:0 0 8px 14px; padding:0;">{impr_html}</ul>
                 {f'<ul style="margin:4px 0 0 14px; padding:0;">{remain_html}</ul>' if remain_html else ""}
-                <div style="color:{c['text_muted']}; font-size:0.75rem; margin-top:8px; font-style:italic;">{qa_report.get('summary', '')}</div>
+                <div style="color:{c['text_muted']}; font-size:0.75rem; margin-top:8px; font-style:italic;">{re.sub(r'<[^>]+>', '', qa_report.get('summary', ''))}</div>
             </div>
             """,
             unsafe_allow_html=True,

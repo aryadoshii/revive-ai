@@ -1,7 +1,6 @@
 <div align="center">
 
-<img src="frontend/assets/qubrid_banner.png" alt="ToneCraft AI Banner" width="100%">
-
+<img src="frontend/assets/qubrid_banner.png" alt="ReVive AI Banner" width="100%">
 
 # ReVive AI ✨
 
@@ -152,10 +151,10 @@ revive-ai/
 ├── frontend/
 │   ├── components.py           # All UI render functions (slider, history, results…)
 │   ├── styles.py               # Sepia-to-vivid CSS theme + sidebar overrides
-│   └── assets/                 # Logo, favicon
+│   └── assets/                 # Logo, banner, pipeline diagram, screenshots
 ├── config/
 │   └── settings.py             # Model names, paths, prompt constants
-└── assets/samples/             # 3 synthetic demo photos + generator script
+└── assets/samples/             # 3 synthetic demo photos
 ```
 
 ---
@@ -184,6 +183,13 @@ streamlit run app.py
 
 Get your free API key at **[qubrid.com](https://qubrid.com)**.
 
+---
+
+## Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| `QUBRID_API_KEY` | API key from [qubrid.com](https://qubrid.com) — required for all agents |
 
 ---
 

@@ -43,7 +43,7 @@ os.makedirs("assets/samples", exist_ok=True)
 # Generate sample images if missing
 _samples_script = os.path.join("assets", "samples", "_generated")
 if not os.path.exists(_samples_script):
-    from assets.samples.generate_samples import generate_all
+    from frontend.assets.generate_samples import generate_all
     generate_all()
     open(_samples_script, "w").close()
 
