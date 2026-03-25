@@ -181,15 +181,8 @@ cp .env.example .env
 streamlit run app.py
 ```
 
-Get your free API key at **[qubrid.com](https://qubrid.com)**.
+Get your free API key at **[qubrid.com](https://platform.qubrid.com/playground)**.
 
----
-
-## Environment Variables
-
-| Variable | Description |
-|----------|-------------|
-| `QUBRID_API_KEY` | API key from [qubrid.com](https://qubrid.com) — required for all agents |
 
 ---
 
