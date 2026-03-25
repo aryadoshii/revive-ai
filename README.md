@@ -87,48 +87,9 @@ All powered by frontier models served through **[Qubrid AI](https://qubrid.com)*
 
 ## How the Pipeline Works
 
-```
-Upload Photo
-     │
-     ▼
-┌────────────────┐
-│ Photo Historian│  ← Qwen3.5-397B-A17B (vision)
-│  era · context │     Reads base64 image, returns decade + colorization hints
-└───────┬────────┘
-        │
-        ▼
-┌────────────────┐
-│ Damage Analyst │  ← Qwen3.5-397B-A17B (vision)
-│  map · score   │    Returns structured damage_report JSON
-└───────┬────────┘
-        │
-        ▼
-┌──────────────────────┐
-│ Restoration Strategist│  ← Nemotron-3-Super-120B (reasoning)
-│  writes brief         │     Outputs ordered list of PIL/OpenCV steps
-└───────┬──────────────┘
-        │
-        ▼
-┌────────────────┐
-│ Image Restorer │  ← Deterministic PIL + OpenCV
-│  execute ops   │    Applies bilateral filter, CLAHE, clarity, enhance…
-└───────┬────────┘
-        │
-        ▼
-┌──────────────────────┐
-│ Colorization Specialist│  ← Nemotron-3-Super-120B (reasoning)
-│  B&W → color palette  │     Skipped for colour photos
-└───────┬──────────────┘
-        │
-        ▼
-┌──────────────┐
-│ QA Inspector │  ← Qwen3.5-397B-A17B (vision)
-│  score 0–100 │     Retry loop if score < 60 (up to 2 retries)
-└───────┬──────┘
-        │
-        ▼
-  Restored Image + Report
-```
+<div align="center">
+  <img src="frontend/assets/pipeline_diagram.png" alt="ReVive AI Pipeline Architecture" width="600" />
+</div>
 
 ---
 
@@ -223,13 +184,6 @@ streamlit run app.py
 
 Get your free API key at **[qubrid.com](https://qubrid.com)**.
 
----
-
-## Environment Variables
-
-| Variable | Description |
-|----------|-------------|
-| `QUBRID_API_KEY` | API key from [qubrid.com](https://qubrid.com) — required for all agents |
 
 ---
 
