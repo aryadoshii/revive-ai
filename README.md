@@ -1,6 +1,7 @@
 <div align="center">
 
-<img src="frontend/assets/qubrid_logo.png" alt="ReVive AI" width="120" />
+<img src="frontend/assets/qubrid_banner.png" alt="ToneCraft AI Banner" width="100%">
+
 
 # ReVive AI ✨
 
@@ -80,7 +81,7 @@ All powered by frontier models served through **[Qubrid AI](https://qubrid.com)*
 
 ### Job History Sidebar
 <!-- Replace with actual screenshot -->
-<img src="frontend/assets/screenshot_history.png" alt="History sidebar" width="100%" />
+<img src="frontend/assets/screenshot_history.png" alt="History sidebar" width="50%" />
 
 ---
 
